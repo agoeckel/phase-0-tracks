@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice Form</title>
+</head>
+<body>
+  <form action="success.html" id="practice_form">
+    <div>
+      <label>Name:</label>
+      <input type="text" name="fullname">
+    </div>
+    <div>
+      <label>Date:</label>
+      <input type="date" name="date">
+    </div>
+    <div>
+      <label>Time:</label>
+      <input type="time" name="usertime">
+    </div>
+    <div>
+      <label>Gender:</label>
+      <select>
+        <option value="gender">Male</option>
+        <option value="gender">Female</option>
+        <option value="gender">Non-Disclosed</option>
+      </select>
+    </div>
+    <div>
+      <label>Age:</label>
+      <input type="number" name="age" min="0">
+    </div>
+
+    <div>
+      <input type="checkbox" name="form_agreement" value="agree">
+      I agree to these terms
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <div>
+      <textarea rows="3" cols="40" name="comment" form="practice_form">Any Comments?</textarea>
+  </div>
+</body>
+</html>
