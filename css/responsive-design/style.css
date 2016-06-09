@@ -4,9 +4,10 @@ body {
 #external-links {
   position: relative;
   width:20%;
+  padding-left: 10px;
+  padding-right: 10px;
   display:inline-block;
   vertical-align: text-top;
-  border: 1px solid red;
 }
 main {
   position: absolute;
@@ -14,7 +15,6 @@ main {
   min-width: 600px;
   display:inline-block;
   vertical-align: text-top;
-  border: 1px solid red;
 }
 blockquote {
   border-left: 5px solid blue;
@@ -54,7 +54,7 @@ figcaption {
 }*/
 @media screen and (max-width: 700px) {
   #external-links {
-    width: 30%;
+    width: 20%;
     padding-left: 10%;
     padding-right: 10%;
   }
