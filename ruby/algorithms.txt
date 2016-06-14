@@ -1,0 +1,17 @@
+- until elevator is found
+  - search for elevator location
+  - call elevator(push button)
+  - enter elevator room
+
+- once inside elevator
+  - while floor number not chosen
+    - search for floor number buttons
+    - match programmed floor number with the respective button number on elevator wall
+    - push corresponding number button
+
+  if floor button illuminates
+    - wait until corresponding button illumination turns off.
+    - arrived on appropriate floor
+    - exit elevator
+
+
