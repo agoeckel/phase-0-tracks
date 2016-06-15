@@ -25,9 +25,9 @@ puts "Type \"done\" when finished. "
 print "> "
 
   while allergies = gets.chomp
-    if allergies == "sunshine"
+    if allergies == "done"
       break
-    elsif allergies == "done"
+    elsif allergies == "sunshine"
       break
     else
       print "> "
@@ -39,7 +39,7 @@ print "> "
   elsif age != 2016 - birth_year && garlic_bread == "y" || health_insurance == "y"
     puts "Probably a vampire"
   elsif allergies == "sunshine"
-    puts "Porbably a vampire"
+    puts "Probably a vampire"
   elsif age != 2016 - birth_year && garlic_bread == "n" && health_insurance == "n"
     puts "Almost certainly a vampire"
   elsif name == "Drake Cula" || name == "Tu Fang"
@@ -47,8 +47,9 @@ print "> "
   else
     puts "Results inconclusive"
 
-  employees = employees - 1
+
   end
+  employees -= 1
 end
 
 
