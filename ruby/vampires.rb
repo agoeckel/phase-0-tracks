@@ -23,10 +23,10 @@ elsif age != 2016 - birth_year && garlic_bread == "y" || health_insurance == "y"
   puts "Probably a vampire"
 elsif age != 2016 - birth_year && age > 100 &&garlic_bread == "n" && health_insurance == "n"
   puts "Almost certainly a vampire"
-elsif name == "Drake Cula" || "Tu Fang"
+elsif name == "Drake Cula" || name == "Tu Fang"
   puts "Definitely a vampire"
 else
-  print "Results inconclusive"
+  puts "Results inconclusive"
 end
 
 
