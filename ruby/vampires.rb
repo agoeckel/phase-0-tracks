@@ -2,7 +2,7 @@
 
 puts "What is your name?"
 print "> "
-name = gets.chomp.to_str
+name = gets.chomp
 puts "How old are you?"
 print "> "
 age = gets.chomp.to_i
