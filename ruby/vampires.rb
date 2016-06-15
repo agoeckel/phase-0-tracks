@@ -2,7 +2,7 @@ puts "How many employees will be processed?"
 print "> "
 employees = gets.chomp.to_i
 
-while employees > 0
+until employees == 0
 
 puts "What is your name?"
 print "> "
@@ -21,27 +21,33 @@ print "> "
 health_insurance = gets.chomp
 
 puts "Please list any allergies you may have."
-  puts "Type \"done\" when finished. "
-    print "> "
-    allergies = gets.chomp
-    until allergies == "done" || allergies == "sunshine"
-      allergies = gets.chomp
+puts "Type \"done\" when finished. "
+print "> "
+
+  while allergies = gets.chomp
+    if allergies == "sunshine"
+      break
+    elsif allergies == "done"
+      break
+    else
       print "> "
     end
-
+  end
 
   if age == 2016 - birth_year && garlic_bread == "y" || health_insurance == "y"
     puts "Probably not a vampire"
-  elsif age != 2016 - birth_year && garlic_bread == "y" || health_insurance == "y" && allergies == "sunshine"
+  elsif age != 2016 - birth_year && garlic_bread == "y" || health_insurance == "y"
     puts "Probably a vampire"
-  elsif age != 2016 - birth_year && age > 100 &&garlic_bread == "n" && health_insurance == "n"
+  elsif allergies == "sunshine"
+    puts "Porbably a vampire"
+  elsif age != 2016 - birth_year && garlic_bread == "n" && health_insurance == "n"
     puts "Almost certainly a vampire"
   elsif name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire"
   else
     puts "Results inconclusive"
 
-  employees -= 1
+  employees = employees - 1
   end
 end
 
