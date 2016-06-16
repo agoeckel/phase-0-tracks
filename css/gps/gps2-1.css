@@ -6,6 +6,10 @@ h1 {
    text-decoration: underline;
 }
 
+img{
+   width: 100%;
+}
+
 .column-1 {
   display: inline-block;
   vertical-align: top;
