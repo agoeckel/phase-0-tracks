@@ -1,0 +1,31 @@
+body {
+  font-family: arial;
+}
+
+h1 {
+   text-decoration: underline;
+}
+
+img{
+   width: 100%;
+}
+
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  padding: 30px;
+  border: 1px solid black;
+}
+
+li {
+  list-style-type: square;
+}
