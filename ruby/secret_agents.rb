@@ -27,13 +27,14 @@ end
 def decrypt(letters)
 index = 0
 result = ""
+alpha = "abcdefghijklmnopqrstuvqxyz"
   while index < letters.length
-  str = letters[index]
-  result = "abcdefghijklmnopqrstuvqxyz".index(str) - 1
-  result = "abcdefghijklmnopqrstuvqxyz"[result]
-  puts result
-  index += 1
+    str = letters[index]
+    str = alpha.index(str) - 1
+    result += alpha[str]
+    index += 1
   end
+  result
 end
 
 encrypt("abc")
