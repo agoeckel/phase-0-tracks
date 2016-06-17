@@ -40,6 +40,7 @@ encrypt("abc")
 encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
+decrypt(encrypt("swordfish"))
 
 
 puts "Would you like to decrypt or encrypt a password?"
