@@ -18,4 +18,12 @@ def encryptor(str)
   puts str
 end
 
-encryptor("password")
+# def decrypt(str)
+#   index = 0
+#   while index < str.length
+#     str[index] =
+
+
+encryptor("zed     ")
+
+
