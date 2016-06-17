@@ -27,7 +27,7 @@ end
 def decrypt(letters)
 index = 0
 result = ""
-alpha = "abcdefghijklmnopqrstuvqxyz"
+alpha = "abcdefghijklmnopqrstuvqxyz\- "
   while index < letters.length
     str = letters[index]
     str = alpha.index(str) - 1
