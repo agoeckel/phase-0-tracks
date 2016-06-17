@@ -21,7 +21,7 @@ def encrypt(str)
     str[index] = str[index].next!
   index += 1
   end
-  puts str
+  str
 end
 
 def decrypt(letters)
@@ -37,11 +37,11 @@ alpha = "abcdefghijklmnopqrstuvqxyz"
   result
 end
 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
-decrypt(encrypt("swordfish"))
+# encrypt("abc")
+# encrypt("zed")
+# puts decrypt("bcd")
+# puts decrypt("afe")
+# decrypt(encrypt("swordfish"))
 
 
 puts "Would you like to decrypt or encrypt a password?"
@@ -52,12 +52,15 @@ answer = gets.chomp
     puts "Enter Password"
     print "> "
     password = gets.chomp
-    decrypt(password)
+    puts decrypt(password)
+    puts encrypt(password)
+    puts decrypt(password)
   elsif answer == "encrypt"
     puts "Enter Password"
     print "> "
     password = gets.chomp
-    encrypt(password)
+    puts encrypt(password)
+    puts decrypt(password)
   else
     puts "Not Detected"
     puts "Enter Password"
