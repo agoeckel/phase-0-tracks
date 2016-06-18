@@ -18,7 +18,7 @@
 def encrypt(str)
   index = 0
   while index < str.length
-    str[index] = str[index].next!
+    str[index] = str[index].next.gsub("!", " ")
   index += 1
   end
   str
@@ -27,7 +27,7 @@ end
 def decrypt(letters)
 index = 0
 result = ""
-alpha = "abcdefghijklmnopqrstuvqxyz\- "
+alpha = "abcdefghijklmnopqrstuvqxyz_ "
   while index < letters.length
     str = letters[index]
     str = alpha.index(str) - 1
