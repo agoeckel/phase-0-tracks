@@ -39,4 +39,25 @@ client = {
   pets: pets
 }
 
-print client
+puts client
+
+puts "Would you like to update a key?(yes/none)"
+print "> "
+answer = gets.chomp
+
+if answer == "yes"
+  puts "What key?"
+  key = gets.chomp.to_sym
+  puts "Please enter your new value"
+  print "> "
+  client[key] = gets.chomp
+elsif answer == "none"
+  puts "Thank you"
+else
+  puts "Not found"
+end
+
+puts client
+
+
+
