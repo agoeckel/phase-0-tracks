@@ -37,7 +37,8 @@ race['Top 3 winners'][0]['First Place'].each do |name|
 end
 
 race['moto1'].delete_if {|name| name == 'LUKE PERRY'}
-
-
+race['moto2'][0].replace('Kirk Little')
+race['moto3'] << 'Patrick Hue'
+puts race['moto2'].first
 
 puts race
