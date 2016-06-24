@@ -5,9 +5,27 @@
 def name_changer(name)
    new_name = name.split(' ')
    new_name[0], new_name[1] = new_name[1], new_name[0]
-   new_name.each do |letters|
-    each_letter = letters.split('')
-  end
+   name = new_name
+   name.each do |letters|
+     if letters =~ /[aeiou]/
+       letters.tr!('aeiou', 'eioua')
+     # elsif letters == 'e'
+     #   letters.gsub!('e', 'i')
+     # elsif letters == 'i'
+     #   letters.gsub!('i', 'o')
+     # elsif letters == 'o'
+     #   letters.gsub!('o', 'u')
+     # elsif letters == 'u'
+     #   letters.gsub!('u', 'a')
+     else
+      letters.next!
+     end
+   end
+
+
+    # vowels = each_letter.select! {|vowel| vowel =~ /[aeiou]/}
+    # p vowels.join('')
+
 end
 
 empty_array = []
