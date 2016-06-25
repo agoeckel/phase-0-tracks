@@ -13,14 +13,11 @@ def name_changer(name)
      end
       @letter_array << letter
   end
-  p @letter_array.length
-
-
-
-
-
-  # new_name[0], new_name[1] = new_name[1], new_name[0]
-
+  word = @letter_array.join('')
+  word.gsub!('!', ' ')
+  array_word = word.split(' ')
+  array_word[0], array_word[1] = array_word[1], array_word[0]
+  p array_word
 
 end
 
@@ -39,13 +36,9 @@ end
 p @empty_array
 
 
+  # @empty_array.each_index do |index|
+  #   puts "#{@empty_array[index]} is really #{@full_name[index]}"
+  # end
 
 
-# def name_output(empty_array, name_array)
-#   @empty_array.each_index do |index|
-#     puts "#{@empty_array[index]} is really #{@name_array[index]}"
-#   end
-# end
 
-
-# name_output(@empty_array, @name_array)
