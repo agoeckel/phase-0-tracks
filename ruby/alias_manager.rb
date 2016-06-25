@@ -22,6 +22,7 @@ def name_changer(name)
   array_word[0], array_word[1] = array_word[1], array_word[0]
 
   @fullname = array_word.join(' ')
+  p @fullname
 end
 
 
@@ -40,10 +41,11 @@ until name == 'quit'
 
 end
 
+@empty_array.each_index do |index|
+  puts "#{@mod_name[index]} is really #{@empty_array[index]}"
+end
 
 
-p @empty_array
-p @mod_name
 
 
 
