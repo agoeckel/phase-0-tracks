@@ -17,8 +17,8 @@ def name_changer(name)
   word.gsub!('!', ' ')
   array_word = word.split(' ')
   array_word[0], array_word[1] = array_word[1], array_word[0]
-  p array_word
-
+  @full_name = []
+  @full_name << array_word.join(' ')
 end
 
 
@@ -33,12 +33,11 @@ until name == 'quit'
   name = gets.chomp
 end
 
-p @empty_array
 
 
-  # @empty_array.each_index do |index|
-  #   puts "#{@empty_array[index]} is really #{@full_name[index]}"
-  # end
+@empty_array.each_index do |index|
+  puts "#{@empty_array[index]} is really #{@full_name[index]}"
+end
 
 
 
