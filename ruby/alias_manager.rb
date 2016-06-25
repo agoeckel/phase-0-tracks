@@ -12,7 +12,7 @@ def name_changer(name)
      if letter =~ /[aeiou]/
       letter.tr!('aeiou', 'eioua')
      else
-      letter.next!
+      letter.tr!('bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ', 'cdfghjklmnpqrstvwxyzbCDFGHJKLMNPQRSTVWXYZB')
      end
       @letter_array << letter
   end
@@ -30,7 +30,7 @@ puts 'what is your name?'
 name = gets.chomp
 
 @empty_array = []
-until name == 'quit'
+until name == 'quit' || name == 'QUIT'
 
   @empty_array << name
   name_changer(name)
