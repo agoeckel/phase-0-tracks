@@ -4,56 +4,59 @@
 
 def name_changer(name)
   new_name = name.split('')
+
   # new_name[0], new_name[1] = new_name[1], new_name[0]
-     name.chars.map! do |letter|
+
+  first_name = new_name[0]
+   name1 = first_name.chars.map! do |letter|
      if letter =~ /[aeiou]/
       letter.tr('aeiou', 'eioua')
      else
       letter.next
      end
   end
+  name1_array = []
+  name1_array << name1
+  p name1
 
-
-
-
-  # first_name = new_name[0]
-  #  name1 = first_name.chars.map! do |letter|
-  #    if letter =~ /[aeiou]/
-  #     letter.tr('aeiou', 'eioua')
-  #    else
-  #     letter.next
-  #    end
-  # end
-  # # name1_array = []
-  # # name1_array <<
-
-  # last_name = new_name[1]
-  #  name2 = last_name.chars.map! do |letter|
-  #    if letter =~ /[aeiou]/
-  #     letter.tr('aeiou', 'eioua')
-  #    else
-  #     letter.next
-  #    end
-  # end
-  # @combine = name2.join('') + name1.join('')
-  # p combine
+  last_name = new_name[1]
+   name2 = last_name.chars.map! do |letter|
+     if letter =~ /[aeiou]/
+      letter.tr('aeiou', 'eioua')
+     else
+      letter.next
+     end
+  end
+  @combine = name2.join('') + name1.join('')
+  p @combine
   # name2_array = []
   # name2_array << name2.join('')
 
   # combine_name = name1_array += name2_array
 end
 
-# index = 3
-# until index <= 0
-#   puts 'Please enter a name'
-#   @name = gets.chomp.downcase
-#   name_changer(@name)
-#   @empty_array = []
-#   @empty_array << @combine
+
+
+puts 'what is your name?'
+name = gets.chomp
+@empty_array = []
+until name == 'quit'
+  name_changer(name)
+  @empty_array << name
+  puts 'give me another name'
+  name = gets.chomp
+end
+
+p @empty_array
+
+
+
+
+# def name_output(empty_array, name_array)
+#   @empty_array.each_index do |index|
+#     puts "#{@empty_array[index]} is really #{@name_array[index]}"
+#   end
 # end
-# index =- 1
 
-#   p @empty_array
 
-p name_changer('Felicia Torres')
-
+# name_output(@empty_array, @name_array)
