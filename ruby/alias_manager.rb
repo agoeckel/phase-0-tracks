@@ -3,36 +3,25 @@
 # modify the name by adjusting conditional letters one letter forward in the given conditional parameters
 
 def name_changer(name)
-  new_name = name.split('')
+  name_split = name.split('')
+  @letter_array = []
+     new_name = name_split.map! do |letter|
+     if letter =~ /[aeiou]/
+      letter.tr!('aeiou', 'eioua')
+     else
+      letter.next!
+     end
+      @letter_array << letter
+  end
+  p @letter_array.length
+
+
+
+
 
   # new_name[0], new_name[1] = new_name[1], new_name[0]
 
-  first_name = new_name[0]
-   name1 = first_name.chars.map! do |letter|
-     if letter =~ /[aeiou]/
-      letter.tr('aeiou', 'eioua')
-     else
-      letter.next
-     end
-  end
-  name1_array = []
-  name1_array << name1
-  p name1
 
-  last_name = new_name[1]
-   name2 = last_name.chars.map! do |letter|
-     if letter =~ /[aeiou]/
-      letter.tr('aeiou', 'eioua')
-     else
-      letter.next
-     end
-  end
-  @combine = name2.join('') + name1.join('')
-  p @combine
-  # name2_array = []
-  # name2_array << name2.join('')
-
-  # combine_name = name1_array += name2_array
 end
 
 
