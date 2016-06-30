@@ -12,10 +12,43 @@ class Santa
     puts "Initializing Santa instance..."
     eat_milk_and_cookies('Sugar Cookie')
     speak
+    @age = 0
     @gender = gender
     @ethnicity = ethnicity
-    @age = 0
     @reindeer_ranking = ["Rudolph", "Dasher", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+  end
+
+  def age
+    @age
+  end
+
+  def gender
+    @gender
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
+  def reindeer_ranking
+    @reindeer_ranking
+  end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  def age=(new_age)
+    @age = new_age
+  end
+
+  def celebrate_birthday
+    @age + 1
+  end
+
+  def get_mad_at(reindeer)
+    index = @reindeer_ranking.rindex(reindeer)
+    @reindeer_ranking.insert(7, @reindeer_ranking.delete_at(index))
   end
 
 end
@@ -43,3 +76,7 @@ end
 
 p santas
 
+p santas[0].age = 50
+p santas[0].celebrate_birthday
+p santas[0].get_mad_at('Donner')
+p @reindeer_ranking
