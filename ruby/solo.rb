@@ -23,6 +23,8 @@
 # output: a trick the rider performed
 
 class Motorcyle_rider
+  attr_reader :bike_make
+  attr_accessor :age, :name, :place, :action
 
   def initialize(name, age, bike_make)
     puts "Initializing new rider....."
@@ -37,11 +39,11 @@ class Motorcyle_rider
   end
 
   def location(place)
-    @place = place
+    puts "Is in beautiful #{place}"
   end
 
   def trick(action)
-    @action = action
+    puts "Just #{action}"
   end
 
 end
@@ -50,7 +52,7 @@ end
 
 riders = ['MCspeed', 'Pastu', 'Dusty', 'Daren', 'Firsty', 'Tooquick', 'Seeya']
 
-# p mcspeed = Motorcyle_rider.new('mcspeed', 50, 'honda')
-# p mcspeed.speed(20)
-# p mcspeed.location('San Diego')
-# p mcspeed.trick('Wheelie')
+p mcspeed = Motorcyle_rider.new('mcspeed', 50, 'honda')
+p mcspeed.speed(20)
+ mcspeed.location('San Diego')
+ mcspeed.trick('Wheelied')
