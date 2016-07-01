@@ -29,7 +29,7 @@ class Motorcyle_rider
   def initialize(name, age, bike_make)
     puts "Initializing new rider....."
     @name = name
-    @age = age
+    @age = 0
     @bike_make = bike_make.capitalize
   end
 
@@ -56,11 +56,12 @@ end
  # mcspeed.trick('Wheelied')
 
 action = ['Wheelied', 'Crashed', 'Burned out', 'Disappeared', 'Jumped', 'got pulled over']
-place = ['San Diego', 'Los Angeles', 'Chicago', 'New York', 'Texas', 'San Francisco']
+place = ['San Diego', 'Los Angeles', 'Chicago', 'New York', 'Texas', 'San Francisco', 'Italy', 'France', 'Brazil', 'Australia']
 
 user_input = []
 
- puts "Motorcycle Rider creator 1.0 (type 'done' to end)"
+ puts "Motorcycle Rider Creator 1.0 (type 'done' to end)"
+ puts "-" * 20
  puts "Continue? (y/n)"
  start = gets.chomp
 
@@ -71,7 +72,8 @@ user_input = []
      @age = gets.chomp.to_i
      puts "What kind of motorcycle are they riding?"
      @bike_make = gets.chomp
-     puts "CONTINUE?"
+     puts "CONTINUE? (y/n)"
+     puts "-" * 10
      start = gets.chomp
      user_input << Motorcyle_rider.new(@name, @age, @bike_make)
    end
