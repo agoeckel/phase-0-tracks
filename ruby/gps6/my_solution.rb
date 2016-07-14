@@ -1,10 +1,10 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Ryan Milstead].
+# We spent [1] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+#require relative is used to load a file that resides in the same directory.
 #
 require_relative 'state_data'
 
@@ -106,3 +106,33 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#What are the differences between the two different hash syntaxes shown in the
+# stat_date file?
+
+  #Answer = The hash rocket is used when the key is declared with a string. The colon hash
+  # is used when you are creating a symbol as a key.
+
+#What does require_relative do? How is it different from require?
+
+  #Answer = require_relative is a subset of require, basically a shorthand of the method.
+  # Require is used when referencing modules and can be used to attach files.
+
+#What are some ways to iterate through a hash?
+
+  #Answer = one way to iterate through a hash is by using the .each method using a block
+  # that references the key and value set inside pipe characters.
+  # Also, one could use the each pair method to iterate through a hash.
+
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+  #Answer = The thing that stood out to me most was the repetitiveness with
+  # setting the variable and referencing the instance variables.
+
+#What concept did you most solidify in this challenge?
+
+  #I was definitely a bit surprised by the refactoring of method parameters. It was
+  # amazing to see them work solely on instance variables. Also, refactoring has between
+  # a bit frustrating for me at times because I usually make the problem more complicated
+  # in my head. Ryan gave me some great insight and helped me understand some valuable
+  # concepts when refactoring.
