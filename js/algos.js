@@ -2,7 +2,7 @@
 //
 
 
-//Finding the Longest Phrase
+// Finding the Longest Phrase
 
 function longestWord(words) {
   for (var i = 0; i < words.length; i++) {
@@ -35,8 +35,18 @@ for (var key in key_value2 && key_value1) {
   console.log(search)
 }
 
+// Random Test Data
 
+function randomTestData(times) {
+  wordArray = [];
+  var letters = "aaalorieumebsumgd";
 
+  for (var i = 0; i < times; i++) {
+    var num = Math.floor(Math.random() * 10 + 1);
+    wordArray.push(letters.substring(0, num));
+  }
+  console.log(wordArray);
+}
 
 
 //Longest Phrase driver code
@@ -55,3 +65,7 @@ var name1 = {name: "Tamir", age: 53, hair: "brown"}
 var name2 = {name: "Steven", age:54, hair: "brown"}
 
 keyValueMatcher(name1, name2)
+
+// Random Test Data driver code
+
+randomTestData(3)
