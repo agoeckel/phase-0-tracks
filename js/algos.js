@@ -16,7 +16,7 @@ function longestWord(words) {
       words.splice(words[i],1);
       i -= 1
   } else {
-       console.log(words);
+       console.log("Largest word: " + words);
     }
   }
 }
@@ -40,7 +40,6 @@ for (var key in key_value2 && key_value1) {
 function randomTestData(times) {
   wordArray = [];
   var letters = "aaalorieumebsumgd";
-
   for (var i = 0; i < times; i++) {
     var num = Math.floor(Math.random() * 10 + 1);
     wordArray.push(letters.substring(0, num));
@@ -68,4 +67,6 @@ keyValueMatcher(name1, name2)
 
 // Random Test Data driver code
 
-randomTestData(3)
+randomTestData(10)
+longestWord(wordArray)
+
