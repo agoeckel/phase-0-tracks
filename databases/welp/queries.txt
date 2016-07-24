@@ -1,0 +1,22 @@
+1. Join three tables
+
+  sqlite> SELECT *  FROM businesses JOIN reviews ON businesses.id=reviews.business_id JOIN users ON users.id=reviews.user_id;
+
+  2|Tony's Pizza|1|3|great food!|2|1|1|Linda|Johnson
+
+2. Choose to just view the user's names, the business name, the star rating, and the comment.
+
+  sqlite> SELECT firstname, name, stars, comment FROM businesses JOIN reviews ON businesses.id=reviews.business_id JOIN users ON users.id=reviews.user_id;
+
+  Linda|Tony's Pizza|3|great food!
+
+3. View the data of all three tables for just one particular business
+
+  sqlite> SELECT * FROM businesses JOIN reviews ON businesses.id=reviews.business_id AND business_id=2 JOIN users ON users.id=reviews.user_id;
+  id          name          id          stars       comment      business_id  user_id     id          firstname   lastname
+  ----------  ------------  ----------  ----------  -----------  -----------  ----------  ----------  ----------  ----------
+  2           Tony's Pizza  1           3           great food!  2            1           1           Linda       Johnson
+  2           Tony's Pizza  3           4           Great pizza  2            2           2           Ted         Lewis
+
+
+
