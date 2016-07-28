@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hidden Words</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div>
+      <nav>
+        <div class="box">
+          <button class="button">Click Me</button>
+          <p class="words">BOX 1!!</p>
+        </div>
+        <div class="box">
+          <button class="button">Click Me</button>
+          <p class="words">BOX 2!!</p>
+        </div>
+        <div class="box">
+          <button class="button">Click Me</button>
+          <p class="words">BOX 3!!</p>
+        </div>
+      </nav>
+    </div>
+    <script src="jquery-3.1.0.js"></script>
+    <script>
+      $(function() {
+        $('.box').hide(300).slideDown(1000);
+        $('.button').on('click', function() {
+          $('.words').slideToggle().slideDown(1000);
+        });
+      });
+    </script>
+  </body>
+</html>
